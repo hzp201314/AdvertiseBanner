@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        ></android.support.v4.view.ViewPager>
+    <!-- layout_alignBottom : 在哪个控件的底部，控件id -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#55000000"
+        android:padding="8dp"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/viewpager"
+        >
+        <TextView
+            android:id="@+id/viewpager_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试文本"
+            android:textColor="#FFFFFF"
+            />
+        <LinearLayout
+            android:id="@+id/root_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <!-- 因为图片一般使用服务器获取的，但是客户端是不知道服务器端有几张图片，所以不能直接在布局文件中写死点的个数 -->
+            <!-- <View
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/shape_dot_selected"
+                /> -->
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
